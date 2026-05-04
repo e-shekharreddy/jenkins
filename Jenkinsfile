@@ -4,12 +4,16 @@ pipeline {
             label 'ROBOSHOP'
         }
     }
+    environment {
+        DEVL = "uat"
+    }
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
                         echo "Building"
+                        echo $DEVL
                     """
                 }
             }
