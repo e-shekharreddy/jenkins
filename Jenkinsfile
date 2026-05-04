@@ -7,6 +7,9 @@ pipeline {
     environment {
         DEVL = "uat"
     }
+    options {
+        disableConcurrentBuilds()
+    }
     stages {
         stage('Build') {
             steps {
@@ -14,6 +17,7 @@ pipeline {
                     sh """
                         echo "Building"
                         echo $DEVL
+                        sleep 5
                     """
                 }
             }
