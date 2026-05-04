@@ -10,7 +10,6 @@ pipeline {
                 script{
                     sh """
                         echo "Building"
-                        exit 1
                     """
                 }
             }
